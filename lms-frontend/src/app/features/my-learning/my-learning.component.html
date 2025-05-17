@@ -1,0 +1,20 @@
+<h2>My Learning</h2>
+
+<div *ngFor="let enrollment of enrolledCourses">
+  <h4>{{ enrollment.courseId }}</h4>
+  <p>Status: {{ enrollment?.status }}</p>
+
+  <label>
+    Update Progress:
+    <input
+      type="range"
+      min="0"
+      max="100"
+      [value]="enrollment.progress"
+      
+    />
+  </label>
+
+  <!-- <p *ngIf="enrollment.completedAt">Completed At: {{ enrollment.completedAt }}</p> -->
+  <hr />
+</div>

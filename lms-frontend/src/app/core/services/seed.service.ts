@@ -8,7 +8,8 @@ import { v4 as uuidv4 } from 'uuid'; // Use uuid for unique IDs (install with `n
 export class SeedService {
   private defaultData: LocalStorageData = {
     user: {
-      userId: uuidv4(),
+      // userId: uuidv4(),
+      userId: '123e4567-e89b-12d3-a456-426614174000',
       name: 'Default User',
       email: 'user@example.com',
       preferences: {

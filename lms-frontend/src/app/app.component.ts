@@ -1,5 +1,6 @@
 // src/app/app.component.ts
 import { Component } from '@angular/core';
+import { SeedService } from './core/services/seed.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'], // Optional
   standalone: false,
 })
-export class AppComponent {}
+export class AppComponent {
+
+  constructor(private seedService: SeedService) {}
+
+  ngOnInit(): void {
+    this.seedService.initializeLocalStorage();
+  }
+}
+
+
