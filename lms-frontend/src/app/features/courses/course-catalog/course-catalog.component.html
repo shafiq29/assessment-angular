@@ -1,0 +1,27 @@
+<div class="filters">
+    <select [(ngModel)]="selectedCategory" (change)="applyFilters()">
+      <option value="">All Categories</option>
+      <option *ngFor="let cat of categories">{{ cat }}</option>
+    </select>
+  
+    <select [(ngModel)]="selectedStatus" (change)="applyFilters()">
+      <option value="">All</option>
+      <option value="free">Free</option>
+      <option value="paid">Paid</option>
+    </select>
+  
+    <select [(ngModel)]="selectedSort" (change)="applyFilters()">
+      <option value="title">Sort by Title</option>
+      <option value="duration">Sort by Duration</option>
+    </select>
+  </div>
+  
+  <div class="course-list">
+    <div *ngFor="let course of filteredCourses" class="course-card">
+      <h3>{{ course.title }}</h3>
+      <p>Category: {{ course.category }}</p>
+      <p>Duration: {{ course.duration }} hrs</p>
+      <p>Status: {{ course.isFree ? 'Free' : 'Paid' }}</p>
+    </div>
+  </div>
+  
