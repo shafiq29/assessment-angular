@@ -1,1 +1,2 @@
-ng new lms-frontend --routing --style=css
+ng new lms-frontend --routing --style=cssgit 
+npm i uuid
